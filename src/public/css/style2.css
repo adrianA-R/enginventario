@@ -1,0 +1,139 @@
+/* Ellipse 1 */
+.elipse1{
+position: absolute;
+width: 271px;
+height: 274px;
+left: -97px;
+top: 99px;
+
+background: #FFD600;
+border-radius: 100%;
+opacity: 0.7;
+}
+
+/* Ellipse 4 */
+
+.elipse2{
+position: absolute;
+width: 271px;
+height: 274px;
+left: 58px;
+top: 249px;
+
+background: #FF7A00;
+border-radius: 100%;
+opacity: 0.7;
+}
+
+.cont-welcome{
+    margin-top: 9em;
+}
+
+
+.change{
+    padding: 3em;
+    margin-top: 5em;
+
+}
+.change h2, h3{
+    display: inline;
+    padding: 5px;
+}
+.change span{
+    font-size: 25px;
+    display: block;
+}
+
+
+/***LOGIN***/
+.cont-login{
+    margin-top: 5em; 
+}
+.cont-login .card{
+    border-radius: 1em;
+}
+.cont-login .card-header{
+    border-radius: 1em;
+    background-color: #FFD600;
+}
+
+/***REGISTER***/
+.cont-regi{
+    margin-top: 5em; 
+}
+.cont-regi .card{
+    border-radius: 1em;
+}
+.cont-regi .card-header{
+    border-radius: 1em;
+    background-color: #46D5CC;
+}
+
+.title{
+    position: relative;
+    font-family: 'Inter','Rubik';
+    font-style: normal;
+    font-size: 56px;
+    line-height: 65px;
+    text-align: right;
+    
+
+    color: #000000;
+}
+
+.letter1{
+    position: relative;
+    font-family: 'Inter','Rubik';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 60px;
+    line-height: 85px;
+    text-align: right;
+
+    color: #FF7A00;
+}
+
+.minus{
+    position: absolute;
+    display: inline ;
+    margin-left: 20em;
+    font-size: 20px;
+    color: #18171786;
+}
+
+.first-btn{
+    background: #46D5CC;
+    opacity: 0.7;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 15px;
+    padding: 20px, 10px;
+    line-height: 35px;
+    color: #000;
+}
+
+.message{
+    position: absolute;
+    margin-top: 20px;
+    margin-left: 60px;
+    z-index: 1;
+}
+.bck{
+    background-color: #fff;
+    box-sizing: border-box;
+    border-radius: 20px;
+    
+}
+.centrar{
+    position: relative;
+}
+.centrar2{
+    position: relative;
+    float:right;
+}
+.img img{
+    width: 600px;
+    height: 248px;
+    object-fit:cover;
+    opacity: 0.7;
+    border-radius:10%;
+}

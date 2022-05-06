@@ -1,0 +1,69 @@
+{{>add}}
+{{>addC}}
+<div class="container p-4">
+  <div class="row">
+    {{#if products}}
+      
+      <div class="container centrar">
+        <a class="btn btn-primary centrar2 ml-2" href="links/general">Ver todos los componentes</a>
+        <a class="btn btn-warning centrar2 ml-2" data-toggle="modal" data-target="#add-components" href="/links/addC">Nuevo componente</a>
+        <a class="btn btn-info centrar2 ml-2" data-toggle="modal" data-target="#add-products" href="/links/add">Nuevo producto</a>
+      </div>
+      
+      <div class="col mt-2">
+        {{#each products}}
+
+          <div class="container bck mt-2">
+            <div class="row">
+              <div class="col-md img">
+                <img src="img/products/{{img}}">
+              </div>
+              <div class="col-md">
+                
+                <div class="card-body">
+                
+                  <b>
+                    <h3 class="card-title text-uppercase text-center">
+                      {{name}}
+                    </h3>
+                  </b>
+
+                  <p class="m-2">
+                    <b>Cantidad: {{amount}}</b><br />
+                    <b>Precio: {{price}}</b><br />
+                  </p>
+
+                  <h5>{{description}}</h5>
+
+                  <p class="text-muted">
+                    {{timeago created_at}}
+                  </p>
+
+                  <a class="btn btn-danger" href="/links/delete/{{id}}">
+                    Eliminar
+                  </a>
+                  <a class="btn btn-secondary" href="/links/edit/{{id}}">
+                    Editar
+                  </a>
+                  <a class="btn btn-primary" href="/links/components/{{id}}">
+                    Especificaciónes
+                  </a>
+                </div>
+                
+              </div>
+
+            </div>
+          </div>
+        {{/each}}
+      </div>
+
+    {{else}}
+      <div class="col-md-4 mx-auto">
+        <div class="card card-body text-center">
+          <p>Aún no hay artículos registrados.</p>
+          <a data-toggle="modal" data-target="#add-products" href="/links/"><b>Agregar artículo!</b></a>
+        </div>
+      </div>
+    {{/if}}
+  </div>
+</div>

@@ -1,0 +1,57 @@
+<!-- Modal -->
+<div class="modal fade" id="add-components" tabindex="-1" role="dialog" aria-labelledby="tittle_add-c" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="tittle_add-c">Agregar nuevo componente</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <form action="/links/addC" method="POST">
+        <div class="modal-body">
+          <div class="form-group">
+            <input type="text" name="name" class="form-control" placeholder="Nombre" autofocus>
+          </div>
+          
+          
+          <div class="form-group">
+            <select class="custom-select my-1 mr-sm-2" name="type" id="inlineFormCustomSelectPref">
+              <option selected class="select">Seleccione el tipo de articulo</option>
+              <option value="Mecánico">Mecánico</option>
+              <option value="Electrónico">Electrónico</option>
+              <option value="Auxiliar">Auxiliar</option>
+            </select>
+            
+          </div>
+
+          <div class="form-group">
+            <input type="number" name="price" class="form-control" placeholder="Precio">
+          </div>
+          <div class="form-group">
+            <input type="number" name="amount" class="form-control" placeholder="Cantidad">
+          </div>
+          <div class="form-group">
+            <textarea name="description" rows="2" class="form-control" placeholder="Descripción"></textarea>
+          </div>
+        
+          <div class="form-group">
+            <select name="products_id" class="custom-select my-1 mr-sm-2" id="inlineFormCustomSelectPref">
+              <option selected> Seleccione a que <b>producto</b> pertenece </option>
+              {{#each products}}
+                <option value=" {{ id }} " > {{ name}} </option>
+              {{/each}}
+            </select>
+          </div>
+
+          
+        
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+          <button class="btn btn-success">Guardar</button>
+        </div>
+      </form>  
+    </div>
+  </div>
+</div>

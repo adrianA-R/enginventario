@@ -1,0 +1,73 @@
+<div class="container p-4">
+  <div class="row">
+    <div class="container centrar">
+      <a class="btn centrar2" href="/links">Volver</a>
+    </div>
+    {{#if products}}
+      {{#if components}}
+        <div class="col-md">
+
+          <div class="card card-body mt-2">
+            <h2 class="card-title text-uppercase ml-2 col-7"> Componentes </h2>
+            <a class="ml-auto btn" href="/links/addC">Registrar nuevo componente</a>
+            <div class="list-group">
+              <h6 class="card-subtitle mb-2 text-muted"> </h6>
+
+              <table class="table">
+                <thead>
+                  <th>Nombre</th>
+                  <th>Tipo</th>
+                  <th>Precio</th>
+                  <th>Cantidad</th>
+                  <th>Descripción</th>
+                  <th> </th>
+                </thead>
+                {{#each components}}
+                  <tbody>
+                    <!-- Con estructuras de control -->
+                    <tr>
+                      <td scope="row"> {{name}} </td>
+                      <td> {{type}} </td>
+                      <td> {{price}} </td>
+                      <td> {{amount}} </td>
+                      <td> {{description}} </td>
+                      <td>
+                        <a
+                          href="/links/deleteC/{{id}}"
+                          class="btn btn-danger"
+                        >Eliminar</a>
+                        <a
+                          href="/links/editC/{{id}}"
+                          class="btn btn-info"
+                        >Editar</a>
+                      </td>
+
+                    </tr>
+                  </tbody>
+                {{/each}}
+              </table>
+
+            </div>
+          </div>
+        </div>
+      {{else}}
+
+        <div class="col-md mt-3">
+          <div class="card card-body text-center">
+            <p>Aún no hay componentes guardados.</p>
+            <a href="/links/addC"><b>Agregar componente!</b></a>
+          </div>
+        </div>
+
+      {{/if}}
+    {{else}}
+      <div class="col-md-4 mx-auto">
+        <div class="card card-body text-center">
+          <p>Aún no hay artículos registrados.</p>
+          <a href="/links/add"><b>Agregar artículo!</b></a>
+        </div>
+      </div>
+    {{/if}}
+
+  </div>
+</div>

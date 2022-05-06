@@ -1,0 +1,35 @@
+<div class="container p-4">
+  <div class="row">
+    <div class="col-md-4 mx-auto">
+      <div class="card">
+        <div class="card-body">
+            
+        <form action="/links/edit/{{product.id}}" method="POST">
+           
+          <div class="form-group">
+            <input type="text" value="{{product.name}}" name="name" class="form-control" placeholder="Nombre" autofocus>
+          </div>
+          <div class="form-group">
+            <input type="text" value="{{product.code}}" name="code" class="form-control" placeholder="Código" autofocus>
+          </div>
+          <div class="form-group">
+            <input type="number" value="{{product.price}}" name="price" class="form-control" placeholder="Precio" autofocus>
+          </div>
+          <div class="form-group">
+            <input type="number" value="{{product.amount}}" name="amount" class="form-control" placeholder="Cantidad">
+          </div>
+          <div class="form-group"> 
+            <input type="text" value="{{product.img}}" name="img" class="form-control" placeholder="Url de la imagen"> 
+          </div>
+          <div class="form-group">
+            <textarea name="description" rows="2" class="form-control" placeholder="Descripción">{{product.description}}</textarea>
+          </div>
+          <button class="btn btn-success btn-block">Guardar cambios</button>
+        
+      </form>
+        
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

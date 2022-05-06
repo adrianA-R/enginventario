@@ -1,0 +1,45 @@
+{{#if user}}
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark nav__a">
+  <div class="container">
+    <a class="navbar-brand" href="/links">
+      <i class=""></i>
+      SIE
+    </a>
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-toggle="collapse"
+      data-target="#navbarNav"
+      aria-controls="navbarNav"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ml-auto">
+        
+          <li class="nav-item">
+            <a class="nav-link" href="/links">Inventario</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/profile">Perfil</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/logout">Cerrar sesión</a>
+          </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+{{else}}
+
+<nav id="barra" class="navbar navbar-expand-lg navbar-light bg-light nav__a">
+  <div class="container">
+    <a class="navbar-brand" href="/links">
+      <i class="fas fa-link"></i>
+      <b> SIE </b>
+    </a>
+</nav>
+{{/if}}
