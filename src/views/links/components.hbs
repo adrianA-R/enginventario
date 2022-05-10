@@ -1,3 +1,5 @@
+{{>addC}}
+
 <div class="container p-4">
   <div class="row">
     <div class="container centrar">
@@ -45,7 +47,7 @@
     {{#if components}}        
       <div class="card card-body mb-3">
         <h2 class="card-title text-uppercase ml-2 col-7"> Componentes </h2>
-        <a class="ml-auto btn" href="/links/addC">Registrar nuevo componente</a>
+        <a class="ml-auto btn" data-toggle="modal" data-target="#add-components" href="/links/addC">Registrar nuevo componente</a>
         <div class="list-group">
           <h6 class="card-subtitle mb-2 text-muted"> </h6>
 
@@ -89,7 +91,7 @@
     <div class="col-md mt-3">
       <div class="card card-body text-center">
       <p>Aún no hay componentes guardados.</p>
-      <a href="/links/addC"><b>Agregar componente!</b></a>
+      <a data-toggle="modal" data-target="#add-components" href="/links/addC"><b>Agregar componente!</b></a>
       </div>
     </div>
 

@@ -37,7 +37,7 @@ router.post("/addC", async (req, res) => {
     type,
     amount,
     description,
-    products_id,
+    products_id
   };
   await pool.query("INSERT INTO components set ?", [newLink]);
   req.flash("success", "Artículo agregado exitosamente");
